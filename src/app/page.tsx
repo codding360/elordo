@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence, inView } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import {
   MapPin,
   Phone,
@@ -21,7 +21,6 @@ import {
   X,
   MenuIcon,
   Home,
-  Trophy,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -188,6 +187,46 @@ export default function HomePage() {
         "Передача ключей происходит после полной оплаты стоимости квартиры и подписания акта приема-передачи. Обычно это происходит в течение 30 дней после получения разрешения на ввод объекта в эксплуатацию.",
     },
   ]
+
+  const stats = [
+    { icon: <Building className="h-6 w-6" />, number: 17, text: "жилых комплексов" },
+    { icon: <Home className="h-6 w-6" />, number: 3500, text: "счастливых семей" },
+    { icon: <Clock className="h-6 w-6" />, number: 11, text: "лет на рынке" },
+    { icon: <span>№</span>, number: 1, text: "застройщик года" },
+  ]
+
+  const StatItem = ({ icon, number, text }: { icon: React.ReactNode; number: number; text: string }) => {
+    const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.1,
+    })
+
+    return (
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col items-center text-center gap-4"
+      >                 
+        <div>
+          <p className="text-3xl md:text-4xl font-bold bg-white/10 flex items-center justify-center gap-3 rounded-full px-4 py-2">
+            {icon}
+            {inView && (
+              <CountUp
+                end={number}
+                duration={2}
+                delay={0.5}
+                suffix={number === 3500 ? "+" : ""}
+              />
+            )}
+          </p>
+          <p className="text-sm md:text-base text-white/80 mt-2">{text}</p>
+        </div>
+      </motion.div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -386,45 +425,9 @@ export default function HomePage() {
       <section className="py-12 md:py-16 bg-[#0F4024] text-white">
         <div className="container px-4 md:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-            {[
-              { icon: <Building className="h-6 w-6" />, number: 17, text: "жилых комплексов" },
-              { icon: <Home className="h-6 w-6" />, number: 3500, text: "счастливых семей" },
-              { icon: <Clock className="h-6 w-6" />, number: 11, text: "лет на рынке" },
-              { icon: <span>№</span>, number: 1, text: "застройщик года" },
-            ].map((stat, index) => {
-              const { ref, inView } = useInView({
-                triggerOnce: true,
-                threshold: 0.1,
-              })
-
-              return (
-                <motion.div
-                  key={index}
-                  ref={ref}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col items-center text-center gap-4"
-                >                 
-                  <div>
-                    <p className="text-3xl md:text-4xl font-bold bg-white/10 flex items-center justify-center gap-3 rounded-full px-4 py-2">
-                      {stat.icon}
-                      {inView && (
-                        <CountUp
-                          end={stat.number}
-                          duration={2}
-                          delay={0.5}
-                          suffix={index === 1 ? "+" : ""}
-                        />
-                      )}
-
-                    </p>
-                    <p className="text-sm md:text-base text-white/80 mt-2">{stat.text}</p>
-                  </div>
-                </motion.div>
-              )
-            })}
+            {stats.map((stat, index) => (
+              <StatItem key={index} {...stat} />
+            ))}
           </div>
         </div>
       </section>
@@ -1287,7 +1290,7 @@ export default function HomePage() {
                           <Star key={star} className="h-5 w-5 fill-amber-400 text-amber-400" />
                         ))}
                       </div>
-                      <p className="text-gray-600 mb-6 italic">"{testimonial.text}"</p>
+                      <p className="text-gray-600 mb-6 italic">{testimonial.text}</p>
                       <div className="flex items-center">
                         <div className="w-12 h-12 rounded-full bg-[#0F4024]/20 flex items-center justify-center text-[#0F4024] font-bold mr-4">
                           {testimonial.name.charAt(0)}
