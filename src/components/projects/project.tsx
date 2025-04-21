@@ -19,7 +19,7 @@ interface Project {
 }
 
 interface ProjectCardProps {
-  index: string
+  index: number
   project: Project
 }
 
