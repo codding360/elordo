@@ -1,6 +1,7 @@
 import type React from "react"
 import "@/app/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "Elordo Group - Лидер в строительстве элитной недвижимости в Бишкеке",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
+          <SpeedInsights/>
         </ThemeProvider>
       </body>
     </html>
