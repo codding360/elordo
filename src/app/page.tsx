@@ -43,7 +43,6 @@ import {
   heroSlides,
   stats,
   news,
-  apartments,
   faqs,
 } 
 from "@/constants"

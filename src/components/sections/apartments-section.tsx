@@ -2,10 +2,9 @@
 
 import type React from "react"
 
-import { useState } from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowRight, Download, Home, Star } from "lucide-react"
+import { ArrowRight, Download, Home } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -13,7 +12,6 @@ import { cn } from "@/lib/utils"
 import { Container } from "@/components/container"
 
 import { fadeIn, staggerContainer, apartments } from "@/constants"
-import { Title, Text } from "../ui/typography"
 
 
 export function ApartmentsSection() {

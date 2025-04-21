@@ -9,9 +9,21 @@ import { Button } from "@/components/ui/button"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import { Subtitle, Text } from "@/components/ui/typography"
 
-export const ProjectCard = ({ project, index }: { project: any; index: number }) => {
+interface Project {
+  name: string,
+  status: string,
+  statusColor: string,
+  address: string,
+  image: string,
+}
+
+interface ProjectCardProps {
+  index: string
+  project: Project
+}
+
+export const ProjectCard = ({ project, index }: ProjectCardProps) => {
     const isMobile = useIsMobile();
     const [hasAnimated, setHasAnimated] = useState(false);
 

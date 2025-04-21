@@ -4,15 +4,15 @@ import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronDown, MapPin } from "lucide-react"
+import { ArrowRight, ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Container } from "@/components/container"
 import { cn } from "@/lib/utils"
-import { fadeIn, staggerContainer } from "@/constants/animations"
+import { staggerContainer } from "@/constants/animations"
 import { ProjectCard } from "./project"
-import { Title, Subtitle, Text } from "@/components/ui/typography"
+import { Title, Text } from "@/components/ui/typography"
 
 // Project data
 const projects = {
