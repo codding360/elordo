@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elordo Group
 
-## Getting Started
+**Elordo Group** — строительная компания, работающая в сфере проектирования, строительства и реализации объектов различного назначения.  
+Проект представляет собой официальный веб-сайт компании, предназначенный для презентации услуг, опыта и реализованных проектов.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## О проекте
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Данный сайт создан как цифровое представительство строительной компании **Elordo Group**.  
+Он служит точкой входа для клиентов, партнёров и инвесторов, позволяя быстро получить информацию о компании и её деятельности.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Основной фокус проекта — доверие, прозрачность и профессиональный имидж.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Цели сайта
 
-To learn more about Next.js, take a look at the following resources:
+- Представить компанию в онлайн-пространстве  
+- Показать направления деятельности и услуги  
+- Продемонстрировать реализованные проекты  
+- Упростить связь с потенциальными клиентами  
+- Повысить узнаваемость бренда
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Для кого предназначен сайт
 
-## Deploy on Vercel
+- Частные клиенты  
+- Корпоративные заказчики  
+- Инвесторы  
+- Партнёры  
+- Подрядчики
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Основные разделы
+
+- Главная страница с кратким описанием компании  
+- Информация о компании и её ценностях  
+- Услуги и направления строительства  
+- Портфолио реализованных проектов  
+- Контактная информация  
+
+---
+
+## Особенности проекта
+
+- Современный и строгий визуальный стиль  
+- Удобство просмотра на мобильных устройствах  
+- Простая и понятная навигация  
+- Акцент на проектах и услугах  
+- Подходит для дальнейшего масштабирования
+
+---
+
+## Возможности развития
+
+- Добавление новых проектов и кейсов  
+- Расширение разделов услуг  
+- Многоязычная версия сайта  
+- Интеграция форм обратной связи  
+- Подключение CMS для управления контентом
+
+---
+
+## Назначение репозитория
+
+Репозиторий используется для:
+- хранения исходного проекта сайта  
+- дальнейшего развития и поддержки  
+- масштабирования функциональности  
+
+---
+
+## Автор
+
+Проект разработан и поддерживается  
+**Marat Sharshenaliev**
